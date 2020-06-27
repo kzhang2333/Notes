@@ -28,7 +28,7 @@ markdown vs word
 
    ![image-20200627112429257](image-20200627112429257.png)
 
-# 本地
+# 将本地笔记本push到github
 
 1. 找到你放笔记的文件夹
    ![image-20200627111933867](image-20200627111933867.png)
@@ -36,3 +36,9 @@ markdown vs word
 2. 打开git bash
 
    ![image-20200627112629991](image-20200627112629991.png)
+
+3. 首先将这个文件夹初始化为git管理的文件夹
+
+   ![image-20200627113600972](image-20200627113600972.png)
+
+4. 这时要注意，还不能push，因为你没有stage任何文件，也没有执行过commit操作，首先我们要用`git add .` 将所有文件加入到缓存区，然后用`git commit -m "anything you want"` 操作将缓存区的文件加入到仓库。这时我们就可以使用github上面给我们的提示啦。
