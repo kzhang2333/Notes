@@ -1,0 +1,3 @@
+# MySQL-杂项
+## Having vs Where
+WHERE is applied before GROUP BY, HAVING is applied after (and can filter on aggregates).
