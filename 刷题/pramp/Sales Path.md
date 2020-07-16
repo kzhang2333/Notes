@@ -4,7 +4,18 @@ The car manufacturer Honda holds their distribution system in the form of a tree
 
 Take for example the tree below:
 
-![image-20200709000847230](image-20200709000847230.png)
+![image-20200715225646223](image-20200715225646223.png)
+
+```java
+/*
+0 -- 5 -- 4 = 9
+0 -- 3 -- 2 -- 1 -- 1 = 7
+...
+0 -- 6 -- 5 = 11
+*/
+```
+
+
 
 A path from Honda’s factory to a car dealership, which is a path from the root to a leaf in the tree, is called a Sales Path. The cost of a Sales Path is the sum of the costs for every node in the path. For example, in the tree above one Sales Path is 0→3→0→10, and its cost is `13` (0+3+0+10).
 
@@ -25,9 +36,9 @@ Implement your function in the most efficient manner and analyze its time and sp
 
 # Hint
 
-- can you show me how to solve a specific example?
-- Draw a graph of nodes may help you 
-- Recursion?
+- Can you find the minimal sales path in the example?
+- Can you write down all possible paths in given example?
+- What if you already know shortest path for all children nodes?
 
 # Ans
 
@@ -43,4 +54,9 @@ Assume n is number of nodes for whole tree
 
 1. Time: O(n) - we visit each node once and only once, each visit take O(1) time
 2. space: O(height) = O(n) in worst case. Because we use recursion, recursion call stacks is height of the tree; in worst case, the tree is a single list, so the height is n. 
+
+# followup 
+
+1. Can you return all the sales paths with minimal cost in an array?
+2. Can you also find longest and shortest path?
 
